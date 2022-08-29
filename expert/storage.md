@@ -1,18 +1,18 @@
-# Storage
+# Stockage
 
 {% hint style="info" %}
-**Warning:** This information is intended for advanced users. Proceed with caution!
+**Attention:** Ces informations sont destinées aux utilisateurs avancés. Procéder avec prudence!
 {% endhint %}
 
-As of Quests 4.0.0-rc.3, you may elect to change your storage option through the `storage-method` setting of [the Quests configuration file](https://github.com/PikaMug/Quests/wiki/2-%E2%80%90-Configuration#configyml). The available choices are described below. If you should wish to change your storage method later without losing data, first use [QuestsConverter](https://github.com/PikaMug/QuestsConverter).
+Depuis Quests 4.0.0-rc.3, vous pouvez choisir de modifier votre option de stockage via le paramètre `storage-method` (méthode de stockage) du [fichier de configuration des quêtes](https://github.com/PikaMug/Quests/wiki/2-%E2%80%90-Configuration#configyml). Les choix disponibles sont décrits ci-dessous. Si vous souhaitez modifier votre méthode de stockage ultérieurement sans perdre de données, utilisez d'abord [QuestsConverter](https://github.com/PikaMug/QuestsConverter).
 
 ### YAML
 
-This is the default selection which will save player data to separated .yml files under the _/Quests/data_ folder. It is recommended for beginner and casual users as it works right "out of the box" with no additional setup required.
+Il s'agit de la sélection par défaut qui enregistrera les données du joueur dans des fichiers .yml séparés sous le dossier _/Quests/data_. Il est recommandé pour les utilisateurs débutants et occasionnels car il fonctionne "prêt à l'emploi" sans aucune configuration supplémentaire requise.
 
 ### MySQL
 
-This will save player data to a local or remote MySQL database that you have configured ahead of time. Table and login settings may be specified via the `storage-data` settings. An example of such configuration might look like:
+Cela enregistrera les données du joueur dans une base de données MySQL locale ou distante que vous avez configurée à l'avance. Les paramètres de table et de connexion peuvent être spécifiés via les paramètres `storage-data`. Un exemple d'une telle configuration pourrait ressembler à :
 
 ```text
 storage-data:
@@ -28,9 +28,9 @@ storage-data:
     connection-timeout: 5000
 ```
 
-Note that HikariCP has been shaded internally to maximize connection speed on largely-populated servers.
+Notez que HikariCP a été _shaded_ en interne pour maximiser la vitesse de connexion sur les serveurs très peuplés.
 
-### Custom
+### Customisée
 
-A developer may opt to employ a custom storage option. See [here](https://github.com/PikaMug/Quests/tree/master/main/src/main/java/me/blackvein/quests/storage/implementation/custom).
+Un développeur peut choisir d'utiliser une option de stockage personnalisée. Voir [lien actuellement indisponible]().
 
